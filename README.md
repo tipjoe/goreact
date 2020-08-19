@@ -23,12 +23,20 @@ Enjoy!
 
 ## How to Install
 1. In a terminal, run <code>git clone git@github.com:tipjoe/goreact.git</code>
-2. cd into goreact and run: <code>composer install</code> and then <code>npm install</code>
-3. While still in goreact folder, enter <code>cp .env.example .env</code> to generate your environment variable file
-4. Now run <code>php artisan key:generate</code> to generate your unique app key
-5. cd into goreact/public
-6. Enter <code>php -S localhost:8000</code> to test with the built-in PHP web server
-7. Open your browser (preferrably Google Chrome) and go to localhost:8000 to run the application
+2. If you're in a *nix environment (Mac, Linux), just cd into goreact and run the shell script with <code>./setup.sh</code> AND SKIP TO STEP 4.
+3. SKIP THIS UNLESS YOU'RE ON WINDOWS. If you're on Windows, manually complete these remaining steps that assume you're still in the goreact directory.
+* <code>composer install</code>
+* <code>npm install</code>
+* <code>cp .env.example .env</code> to generate your environment variable file
+* <code>php artisan key:generate</code> to generate your unique app key
+* <code>php artisan storage:link</code> to map storage/app/public to public/storage 
+* <code>cd public</code>
+* <code>php -S localhost:8000</code> to test with the built-in PHP web server
+
+4. Now just open your browser (preferrably Google Chrome) and go to localhost:8000 to run the application.
+
+To stop the local web server, just hit Ctrl-C at the terminal. To restart ensure 
+you're in the goreact/public folder and enter <code>php -S localhost:8000</code>
 
 Note 1: I intentionally chose to emulate the database with sessions to keep this setup more simple. 
 
