@@ -39,7 +39,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
+
+                        {{-- Intentionally commented out. --}}
+
+                        {{-- @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -66,7 +69,7 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest --}}
                     </ul>
                 </div>
             </div>
@@ -76,5 +79,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('closing-scripts');
 </body>
 </html>
