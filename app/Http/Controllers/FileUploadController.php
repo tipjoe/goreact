@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FileUpload extends Controller
+class FileUploadController extends Controller
 {
 
     /**
      * Show the file upload form and list in one action.
      */
     public function index() {
-
+        return view('home');
     }
 
     /**

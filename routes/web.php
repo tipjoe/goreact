@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'FileUpload@index');
+Route::get('/', 'FileUploadController@index');
 
-Route::post('/', 'FileUpload@store');
+Route::post('/', 'FileUploadController@store');
 
-Route::get('/file/{id}', 'FileUpload@show');
+Route::get('/file/{id}', 'FileUploadController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
