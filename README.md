@@ -28,6 +28,7 @@ Enjoy!
 <details>
     <summary>Try <code>bash setup.sh</code>. Expand this for more details.</summary>
     Alternatively, you can manually run the remaining steps, as follows:
+
 * <code>composer install</code>
 * <code>npm install</code>
 * <code>cp .env.example .env</code> to generate your environment variable file
