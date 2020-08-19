@@ -3,32 +3,38 @@
 This project demonstrates the requirements defined at https://gitlab.goreact.com/GoREACT/applicant-project. 
 
 ## Assumptions and Thought Process
-You have access to a computer with PHP 7.2+ installed. 
+This project assumes you have a computer with:
 
-This is a "prototype" tested and functioning in Google Chrome and iOS Safari 
-(used valet's share feature to view a grok URL on my phone).
+* PHP 7.2+
+* composer
+* npm
+* git
 
-I chose not to use a front-end framework because: 1) When you said you use AngularJS,
-I interpreted that as Angular 1.x, which I'm rusty with, 2) Unless I have a specific 
-reason to use a tool to meet the requirement, I prefer to keep the code lighter and 
-simpler.
+This was tested and functioning in Google Chrome and iOS Safari 
+(used valet's share feature to view a grok URL on my phone). 
 
-Lastly, I spent about three hours on core requirements. But I was having fun and spent 
-another two to three on the "extra credit". I lost some time second-guessing
-my decision to not use the database. 
+I made two explicit choices:
 
-I shortly considered creating a Docker image that you could just download and run. But 
-with the time constraints, that seemed like overkill. 
+1. No database - Make it drop-dead simple to try out.
+2. No front-end framework - without a requirement to justify an extra layer of
+code, I prefer keeping the code more clean and simple. 
 
 Enjoy!
 
 ## How to Install
-1. In a terminal, run git clone @todo url
-2. cd into goreact/public
-3. Enter <code>php -S localhost:8000</code> to test with the built-in PHP web server
-4. Open your browser (preferrably Google Chrome) and go to localhost:8000 to run the application
+1. In a terminal, run <code>git clone git@github.com:tipjoe/goreact.git</code>
+2. cd into goreact and run: <code>composer install</code> and then <code>npm install</code>
+3. While still in goreact folder, enter <code>cp .env.example .env</code> to generate your environment variable file
+4. Now run <code>php artisan key:generate</code> to generate your unique app key
+5. cd into goreact/public
+6. Enter <code>php -S localhost:8000</code> to test with the built-in PHP web server
+7. Open your browser (preferrably Google Chrome) and go to localhost:8000 to run the application
 
-Note: I intentionally chose to emulate the database with sessions to make this setup really simple. 
+Note 1: I intentionally chose to emulate the database with sessions to keep this setup more simple. 
+
+Note 2: If I were trying to share this with a less technical audience or an audience 
+who may not already have typical LAMP environment already installed, I would either write a 
+startup shell script to install the prerequisites or Dockerize this. 
 
 ## How to Run the Tests
 1. In terminal, cd into the goreact folder
