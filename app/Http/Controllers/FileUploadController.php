@@ -42,7 +42,7 @@ class FileUploadController extends Controller
         if ($path) {
             $new = (object) [
                 'name' => $name,
-                'path' => '/uploads/' . $name,
+                'path' => '/storage/uploads/' . $name,
                 'created' => date('m/d/Y h:i:s a', time()),
                 'type' => strToUpper($f->extension()),
                 'caption' => $caption
