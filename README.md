@@ -23,7 +23,7 @@ Enjoy!
 
 ## How to Install
 1. In a terminal, run <code>git clone git@github.com:tipjoe/goreact.git</code>
-2. If you're in a *nix environment (Mac, Linux), just cd into goreact and run the shell script with <code>./setup.sh</code> AND SKIP TO STEP 4.
+2. If you're in a *nix environment (Mac, Linux), just cd into the goreact folder, run the shell script with <code>./setup.sh</code> THEN SKIP TO STEP 4.
 3. SKIP THIS UNLESS YOU'RE ON WINDOWS. If you're on Windows, manually complete these remaining steps that assume you're still in the goreact directory.
 * <code>composer install</code>
 * <code>npm install</code>
